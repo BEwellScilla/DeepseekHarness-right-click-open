@@ -1,0 +1,12 @@
+# This file is the "composition patch": it inserts our plugin as one row in
+# the DSH composition tree (the big list of things that get loaded).
+#
+# package.json points here via the `dsh.bundle.patch` field, so the harness
+# knows to apply it when the plugin is installed into a profile.
+#
+# `id`   – a unique id for this row (shown in config dumps / logs)
+# `name` – the npm package name of the plugin, which the loader resolves
+#          from the profile's node_modules
+- insert:
+    - id: dsh-rightclick-open
+      name: dsh-rightclick-open

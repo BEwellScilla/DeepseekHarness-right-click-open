@@ -1,0 +1,44 @@
+{
+  "name": "dsh-rightclick-open",
+  "version": "0.1.0",
+  "description": "Adds a Windows Explorer right-click \"Open DeepSeek Harness here\" menu item that boots dsh in the clicked folder.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "dsh-rightclick-open": "bin/dsh-rightclick-open.mjs"
+  },
+  "files": [
+    "lib",
+    "bin",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "windows",
+    "context-menu",
+    "right-click"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.10"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "test": "node --test"
+  }
+}
