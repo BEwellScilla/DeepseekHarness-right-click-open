@@ -27,6 +27,14 @@
     "right-click"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BEwellScilla/DeepseekHarness-right-click-open.git"
+  },
+  "homepage": "https://github.com/BEwellScilla/DeepseekHarness-right-click-open",
+  "bugs": {
+    "url": "https://github.com/BEwellScilla/DeepseekHarness-right-click-open/issues"
+  },
   "engines": {
     "node": ">=20.10"
   },
