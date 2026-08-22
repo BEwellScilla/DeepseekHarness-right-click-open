@@ -134,9 +134,10 @@ export const name = 'dsh-rightclick-open'   // plugin id
 export function apply(ctx) { ... }          // runs when the plugin loads
 ```
 
-Inside `apply`, `ctx.on('ready', ...)` runs our install once the app has
-booted. We use `ctx.logger` for messages. Errors are caught and logged rather
-than crashing dsh.
+Inside `apply`, we run the registry install **immediately** and use
+`ctx.logger` for messages. Errors are caught and logged rather than crashing
+dsh. (We don't wait for a `ready` event — dsh host plugins can do their work
+straight in `apply`, no lifecycle dance needed.)
 
 ### `bin/dsh-rightclick-open.mjs`
 
